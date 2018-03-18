@@ -9,6 +9,9 @@
 #import "RDBlueTooth.h"
 
 
+#define kServiceUUID    @"49535343-FE7D-4AE5-8FA9-9FAFD205E455"
+#define kPeripheralUUID @"F92FE801-4151-A61F-28DA-BD109B645CBA"
+
 
 @interface RDBlueTooth ()
 
@@ -129,7 +132,7 @@
     }
     
     //NSLog(@"扫描到外设：%@", peripheral);
-    //NSLog(@"Discovered name:%@,identifier:%@,advertisementData:%@,RSSI:%@", peripheral.name, peripheral.identifier,advertisementData,RSSI);
+    NSLog(@"Discovered name:%@, identifier:%@, advertisementData:%@, RSSI:%@", peripheral.name, peripheral.identifier,advertisementData,RSSI);
     
     //把扫描到的外设的属性打包成字典，保存到本地以后，再返回给上层
     NSMutableDictionary *periDic = [[NSMutableDictionary alloc] init];
