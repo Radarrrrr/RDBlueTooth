@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RDBlueTooth.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <RDBlueToothDelegate, UITableViewDelegate, UITableViewDataSource>
+
+
 
 
 @end
